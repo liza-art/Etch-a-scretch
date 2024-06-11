@@ -4,6 +4,7 @@ function createGrid(rows, columns) {
   gridContainer.style.flexWrap = "wrap";
   gridContainer.style.flexDirection = 'row';
   
+  
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns; j++) {
@@ -12,8 +13,7 @@ function createGrid(rows, columns) {
       cell.style.border = '1px solid black';
       cell.style.height = '25px'
       cell.style.width = '24px';
-      cell.style.justifyContent = 'center';
-      cell.style.alignItems = 'center';
+     
 
 
       cell.addEventListener('mouseover', function(){
@@ -28,6 +28,7 @@ function createGrid(rows, columns) {
 }
 
 const mainContainer = document.querySelector(".main");
+mainContainer.style.width = '960px';
 mainContainer.appendChild(createGrid(16, 16)); 
 
 const buttonGridSize = document.getElementById("gridSize");
